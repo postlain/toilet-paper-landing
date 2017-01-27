@@ -42,7 +42,7 @@ export default function makeWebpackConfig({
 		devtool: (sourcemaps || !debug) ? '#source-map' : 'eval',
 		resolve: {
 			modulesDirectories: [
-				'node_modules'
+				'node_modules', './app/scripts'
 			],
 			extensions: ['.js', '']
 		},
