@@ -5,6 +5,7 @@ pages:
   script:
   - npm i
   - npm run build
+  - npm run deploy:gitlab
   artifacts:
     paths:
-    - dist
+    - public

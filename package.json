@@ -27,6 +27,7 @@
     "lint": "npm-run-all -p lint:*",
     "predeploy": "npm run production",
     "deploy": "gulp deploy",
+    "deploy:gitlab": "mv dist public",
     "clean": "rimraf dist app/styles/sprites/*.styl",
     "prezip": "npm run production",
     "zip": "gulp zip",
