@@ -1,49 +1,74 @@
 mixin wrap()
-	+b('span').wrap&attributes(attributes)
-	#main
-		.yellow
-			.blue
-				.center
-	script(type='text/javascript').
-		$('body').parallax({
-			elements: [
-				{
-					selector: 'div.yellow',
-					properties: {
-						x: {
-							'background-position-x': {
-								initial: 0,
-								multiplier: 0.1,
-								invert: true
-							}
-						},
-						y: {
-							'background-position-y': {
-								initial: 0,
-								multiplier: 0.1,
-								invert: true
-							}
-						}
-					}
-				},
-				{
-					selector: 'div.blue',
-					properties: {
-						x: {
-							'background-position-x': {
-								initial: 0,
-								multiplier: 0.3
-							}
-						},
-						y: {
-							'background-position-y': {
-								initial: 0,
-								multiplier: 0.3
-							}
-						}
-					}
-				}
-			]
-		});
+    +b('span').wrap&attributes(attributes)
+    #main
+        +b.pic__yellow(src='../assets/images/otaku_trash.jpg')
+        +b
+            +b.pic__blue(src='../assets/images/anime_boys.jpg')
+        +b
+            +b.pic__center(src='../assets/images/dance_boy.jpg')
+    #main
+        .yellow
+        .blue
+        .center
+    script(type='text/javascript').
+      $('body').parallax({
+        elements : [
+          {
+            selector :   'div.yellow',
+            properties : {
+              x : {
+                'background-position-x' : {
+                  initial :    0,
+                  multiplier : 0.3,
+                  invert :     true
+                }
+              },
+              y : {
+                'background-position-y' : {
+                  initial :    0,
+                  multiplier : 0.3,
+                  invert :     true
+                }
+              }
+            }
+          },
+          {
+            selector :   'div.blue',
+            properties : {
+              x : {
+                'background-position-x' : {
+                  initial :    0,
+                  multiplier : 0.3
+                }
+              },
+              y : {
+                'background-position-y' : {
+                  initial :    0,
+                  multiplier : 0.3
+                }
+              }
+            }
+          },
+          {
+            selector :   'div.center',
+            properties : {
+              x : {
+                'background-position-x' : {
+                  initial :    0,
+                  multiplier : 0.3,
+                  invert :     true
+                }
+              },
+              y : {
+                'background-position-y' : {
+                  initial :    0,
+                  multiplier : 0.3,
+                  invert :     true
+                }
+              }
+            }
+          }
+        ]
+      });
 
-	block
+    block
