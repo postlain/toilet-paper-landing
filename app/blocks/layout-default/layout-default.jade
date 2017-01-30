@@ -3,6 +3,7 @@ include /../node_modules/jade-injected/jade-injected
 include ../page/page
 include ../scripts/scripts
 include ../wrap/wrap
+include ../page1/page1
 
 doctype html
 html(lang='ru')
@@ -10,4 +11,4 @@ html(lang='ru')
 	+page
 		block content
 		+scripts(['app.min.js'])
-		+wrap
+		+page1
