@@ -1,10 +1,13 @@
 mixin page1()
 	+b.page1&attributes(attributes)
-		+b.pic__background
-			+b.container__top
-				+b.text__Header
-					|В ваших руках
-					br
-					|самое дорогое !
-
+		+b.container__top
+			+b.text__Header
+				|В ваших руках
+				br
+				|самое дорогое !
+			+b.text__min Оставьте свои контактные данные и мы свяжемся с вами
+			+b.input
+				input(type="text" name="email or phone" placeholder="    email/телефон")
+			+b.button1
+				+b.text__inbutton Отправить
 		block
