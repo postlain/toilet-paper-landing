@@ -2,6 +2,7 @@
 	display flex
 	align-items: center
 	justify-content: center
+	z-index: 1
 
 .page1_background
 	background-color: #f0f5f2
@@ -72,10 +73,18 @@
 	width 600px
 	padding: 40px
 #main
+	display flex
+	align-items: center
+	justify-content: center
+	justify-content: center
 	position absolute
-#main .top_front_paper
-	background: transparent url(../images/top_front_paper.png) 0 0 no-repeat
 
-#main .top_background_paper
+.top_front_paper
+	background: transparent url('../images/top_front_paper.png') 0 0 no-repeat
+	height 800px
+	width 1800px
+.top_background_paper
 	background: transparent url(../images/top_background_paper.png) 0 0 no-repeat
-	height: 1000px
+	height 800px
+	width 1800px
+	background-position: -9.3px 13.8px

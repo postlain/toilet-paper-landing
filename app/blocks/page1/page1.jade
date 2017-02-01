@@ -1,9 +1,6 @@
 mixin page1()
 	+b.page1.page1_background&attributes(attributes)
 		span.space_text Paper
-		#main
-			.top_front_paper
-				.top_background_paper
 		+b.page1.page1_container__top
 			+b.text__header
 				|Мягче ваших ожиданий
@@ -16,41 +13,44 @@ mixin page1()
 				|и мы свяжемся с вами.
 			+b(id="button1").page1.button
 				+b.text_in_button Заказать
+		#main
+			.top_background_paper
+				.top_front_paper
 		script(type='text/javascript').
 			$('body').parallax({
 				elements : [
 					{
-						selector :   'div.pic__yellow',
+						selector :   'div.top_front_paper',
 						properties : {
 							x : {
 								'background-position-x' : {
 								initial :    0,
-								multiplier : 0.3,
+								multiplier : 0.1,
 								invert :     true
 								}
 							},
 			y : {
 			'background-position-y' : {
 			initial :    0,
-			multiplier : 0.3,
+			multiplier : 0.1,
 			invert :     true
 			}
 			}
 			}
 			},
 			{
-			selector :   'div.blue',
+			selector :   'div.top_background_paper',
 			properties : {
 			x : {
 			'background-position-x' : {
 			initial :    0,
-			multiplier : 0.3
+			multiplier : 0.05
 			}
 			},
 			y : {
 			'background-position-y' : {
 			initial :    0,
-			multiplier : 0.3
+			multiplier : 0.05
 			}
 			}
 			}
