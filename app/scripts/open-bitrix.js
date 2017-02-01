@@ -1,4 +1,4 @@
-import $ from 'jquery';
+
 
 $( "#button1" ).click(function() {
 	$( "#bitrix" ).toggle( "fast", function() {
