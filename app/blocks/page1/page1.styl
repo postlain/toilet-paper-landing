@@ -1,5 +1,9 @@
 .page1
 	display flex
+	align-items: center
+	justify-content: center
+
+.page1_background
 	background-color: #f0f5f2
 	background-position: 50% 50%
 	background-repeat: no-repeat
@@ -8,7 +12,7 @@
 	capture: on
 	container: on
 	background-size: cover
-	height: 800px
+	height: 750px
 	width: 100%
 	z-index: 1
 	parallax: on
@@ -16,72 +20,52 @@
 	fullcover: on
 	left: 0
 	top: 0
-	align-items: center
-	justify-content: center
+	flex-direction: column
 
-.container
-	&__top
-		width 518px
-		height 320px
-		background-color rgba(182, 202, 185, 0.60)
-		top: 50%
-		left: 50%
+	//color #fefefe
 
+.text__header
+	font-family:"Georgia"
+	font-size 30pt
+	color #fefefe
 
-.text
-	&__Header
-		font-family 'Open Sans'
-		font-weight bolder
-		font-size 30pt
-		color #fefefe
-		text-align center
-		margin 23px
-	&__min
-		font-family 'Open Sans'
-		font-size 12pt
-		color #fefefe
-		text-align center
-	&__inbutton
-		font 'Open Sans'
-		font-size 17pt
-		color #fefefe
-		text-align center
-		margin-top 8px
+.text__main
+	text-align center
+	padding 20px
+	font-family:"Georgia"
+	font-size 15pt
+	color #fefefe
 
-:-moz-placeholder
-	color: rgba(255, 249, 248, 0.8)
-
-::-webkit-input-placeholder
-	color: rgba(255, 249, 248, 0.8)
-
-.input
-	position absolute
-	margin 28px 0 0 82px
-input[type="text"]
-	border: 3px dashed #fefefe
-	border-radius: 6px
-	-webkit-border-radius: 4px
-	-moz-border-radius: 4px
-	-khtml-border-radius: 4px
-	background: rgba(255, 255, 255, 0) !important
-	outline: none
-	height: 39px
-	width: 349px
-	color: #fefefe
-	font-size: 16px
-	font-family: Calibri
-
-.button1
-	position absolute
-	background-color #b4c180
+.button
+	background #b4c180
 	width 278px
 	height 39px
-	border-radius: 10px
-	margin 97px 0 0 115px
+	-webkit-border-radius: 10px
+	-moz-border-radius 10px
+	border-radius 10px
 	container: on
+	overflow: hidden
 	box-shadow  0px 3px 1px rgba(0, 0, 0, 0.16)
 
-.button1:active
+.button:active
 	background-color: #cbd892
 	box-shadow  0px 3px 1px rgba(0, 0, 0, 0.1)
 
+.text_in_button
+	font 'Open Sans'
+	font-size 17pt
+	color #fefefe
+	text-align center
+
+.space_text
+	font-family: Lobster
+	font-size: 60px
+	color: #ffadba
+
+
+.page1_container__top
+	flex-direction column
+	justify-content: space-around
+	background-color rgba(182, 202, 185, 0.60)
+	width 600px
+	padding: 40px

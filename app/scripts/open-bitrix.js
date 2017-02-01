@@ -1,7 +1,9 @@
-import jq from 'jquery';
+import $ from 'jquery';
 
-console.log('saf');
-jq("#button-to-open").click(function () {
-	console.log('sasdaf');
-	jq("div.bitrix1").slideToggle("slow");
+$( "#button1" ).click(function() {
+	$( "#bitrix" ).toggle( "fast", function() {
+		$('html, body').animate({
+			scrollTop: $("#bitrix").offset().top
+		}, 'slow');
+	});
 });

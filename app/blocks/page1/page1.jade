@@ -1,14 +1,16 @@
 mixin page1()
-	+b.page1&attributes(attributes)
-		+b.container__top
-			+b.text__Header
-				|В ваших руках
-				br
-				|самое дорогое !
-			+b.text__min Оставьте свои контактные данные и мы свяжемся с вами
-			+b.input
-				input(type="text" name="email or phone" placeholder="    email/телефон")
-			+b(id="button-to-open").button1
-				+b.text__inbutton Отправить
-		.bitrix1 dghgh
+	+b.page1.page1_background&attributes(attributes)
+		span.space_text Paper
+		+b.page1.page1_container__top
+			+b.text__header
+				|Мягче ваших ожиданий.
+			+b.text__main
+				|Нежная, как шёлк, сухая туалетная бумага Paper
+				|очищает с максимальным комфортом и заботой о коже,
+				|а влажная туалетная бумага Kleenex обеспечивает
+				|полную чистоту и ощущение абсолютной свежести!
+				|Оставтье свою контактную инвормацию
+				|и мы свяжемся с вами
+			+b(id="button1").page1.button
+				+b.text_in_button Заказать
 		block
