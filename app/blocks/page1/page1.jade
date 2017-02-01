@@ -1,80 +1,34 @@
 mixin page1()
 	+b.page1.page1_background&attributes(attributes)
 		span.space_text Paper
+
+		+b.top_background_paper
+		+b.top_front_paper
+
 		+b.page1.page1_container__top
 			+b.text__header
-				|Мягче ваших ожиданий
+				| Мягче ваших ожиданий
 			+b.text__main
-				|Нежная, как шёлк, сухая туалетная бумага Paper
-				|очищает с максимальным комфортом и заботой о коже,
-				|а влажная туалетная бумага Kleenex обеспечивает
-				|полную чистоту и ощущение абсолютной свежести!
-				|Оставтье свою контактную инвормацию
-				|и мы свяжемся с вами.
+				| Нежная, как шёлк, сухая туалетная бумага Paper
+				| очищает с максимальным комфортом и заботой о коже,
+				| а влажная туалетная бумага Paper обеспечивает
+				| полную чистоту и ощущение абсолютной свежести!
+				| Оставтье свою контактную инвормацию
+				| и мы свяжемся с вами.
 			+b(id="button1").page1.button
 				+b.text_in_button Заказать
-		#main
-			.top_background_paper
-				.top_front_paper
 		script(type='text/javascript').
-			$('body').parallax({
-				elements : [
-					{
-						selector :   'div.top_front_paper',
-						properties : {
-							x : {
-								'background-position-x' : {
-								initial :    0,
-								multiplier : 0.1,
-								invert :     true
-								}
-							},
-			y : {
-			'background-position-y' : {
-			initial :    0,
-			multiplier : 0.1,
-			invert :     true
-			}
-			}
-			}
-			},
-			{
-			selector :   'div.top_background_paper',
-			properties : {
-			x : {
-			'background-position-x' : {
-			initial :    0,
-			multiplier : 0.05
-			}
-			},
-			y : {
-			'background-position-y' : {
-			initial :    0,
-			multiplier : 0.05
-			}
-			}
-			}
-			},
-			{
-			selector :   'div.pic__center',
-			properties : {
-			x : {
-			'background-position-x' : {
-			initial :    0,
-			multiplier : 0.3,
-			invert :     true
-			}
-			},
-			y : {
-			'background-position-y' : {
-			initial :    0,
-			multiplier : 0.3,
-			invert :     true
-			}
-			}
-			}
-			}
-			]
-			});
+			const background_paper_pos = $('.top_background_paper');
+			const front_paper_pos = $('.top_front_paper');
+			$('body').parallax([
+				{
+					item: background_paper_pos,
+					strength: 100
+				},
+				{
+					item: front_paper_pos,
+					strength: -100
+				},
+			]);
 
 	block
